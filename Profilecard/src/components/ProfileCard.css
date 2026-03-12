@@ -1,0 +1,119 @@
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(202, 198, 198, 0.08);
+  border-radius: 12px;
+  padding: 24px;
+  width: 280px;
+  min-height: 320px;
+  color: #e8eaf6;
+  font-family: 'JetBrains Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(60px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+.card h2{
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    color: #ffffff;
+}
+
+.card .role{
+    font-size: 13px;
+    color: #a8c8ff;
+    margin: 0 0 12px 0;
+}
+
+
+.card .bio {
+  font-size: 12px;
+  color: #8899aa;
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.card .availability {
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.card .skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.card .skills span {
+  background: rgba(168, 200, 255, 0.1);
+  border: 1px solid rgba(168, 200, 255, 0.2);
+  color: #a8c8ff;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+}
+
+.card .skill-section{
+  margin-top: auto;
+}
+
+.availability-dot {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #4a6080;
+}
+
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dot.green {
+  background: #69f0ae;
+  box-shadow: 0 0 6px #69f0ae;
+}
+
+.dot.red {
+  background: #ef9a9a;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.card.available::before {
+  background: #69f0ae;
+}
+
+.card.unavailable::before {
+  background: #ef9a9a;
+}
