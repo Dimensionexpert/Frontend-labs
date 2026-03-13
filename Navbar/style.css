@@ -91,3 +91,45 @@ body {
 .links li:nth-child(2) { animation-delay: 0.1s; }
 .links li:nth-child(3) { animation-delay: 0.2s; }
 .links li:nth-child(4) { animation-delay: 0.3s; }
+
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px 40px;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobile-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.mobile-menu.open {
+    display: flex;
+}
+
+.hamburger.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.hamburger span {
+    transition: 0.3s;
+}
