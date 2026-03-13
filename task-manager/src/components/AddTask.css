@@ -1,0 +1,82 @@
+.add-task{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: bottom 32px;
+}
+
+.input-wrapper{
+    position: relative;
+    flex: 1;
+}
+
+.input-wrapper input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #2a3a5c;
+  padding: 12px 0;
+  color: #e8eaf6;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-wrapper label {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  color: #4a6080;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.input-wrapper.has-value label {
+  top: -10px;
+  font-size: 10px;
+  color: #a8c8ff;
+}
+
+.input-wrapper.has-value input {
+  border-bottom-color: #a8c8ff;
+}
+
+.input-wrapper.has-value .cursor {
+  display: none;
+}
+
+.cursor {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: #a8c8ff;
+  font-size: 14px;
+  animation: blink 1s infinite;
+
+}
+
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.add-task button {
+  background: transparent;
+  border: 1px solid #2a3a5c;
+  color: #a8c8ff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-task button:hover {
+  background: rgba(168, 200, 255, 0.1);
+  border-color: #a8c8ff;
+}
