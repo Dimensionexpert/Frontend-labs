@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background : #0d0d0d;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.gradient-text {
+    font-size: 80px;
+    font-family: sans-serif;
+    font-weight: bold;
+    /* color: #fff; */
+    background: linear-gradient(90deg, #7f5af0, #2cb67d, #ff6b6b, #7f5af0);
+    background-size: 300%;
+    -webkit-background-clip:  text;
+    -webkit-text-fill-color: transparent;
+    animation: flow 4s linear infinite;
+}
+
+@keyframes flow {
+    0%   { background-position: 0% }
+    100% { background-position: 300% }
+}
